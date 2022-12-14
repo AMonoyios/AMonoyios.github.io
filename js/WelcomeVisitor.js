@@ -1,32 +1,23 @@
-var today = new Date();
-var time = today.getHours() + today.getMinutes() + today.getSeconds();
+let today = new Date();
+let currentHour = today.getHours();
 
-var welcomeText = "";
+let welcomeText = "";
 
-switch (time) {
-    case (time >= 050000 && time < 120000):
-    {
-        welcomeText = "Good morning!";
-    }
-    break;
-    case (time >= 120000 && time < 180000):
-    {
-        welcomeText = "Good afternoon!";
-    }
-    break;
-    case (time >= 180000 && time < 230000):
-    {
-        welcomeText = "Good evening!";
-    }
-    break;
-    case (time >= 230000 && time < 050000):
-    {
-        welcomeText = "Why arent you sleeping?";
-    }
-    break;
-    default:
-        welcomeText = "Error: Invalid time insert.";
-        break;
+if (currentHour < 6)
+{
+    welcomeText = "Why aren't you sleeping?";
+}
+else if (currentHour < 12)
+{
+    welcomeText = "Good Morning!";
+}
+else if (currentHour < 18)
+{
+    welcomeText = "Good Afternoon!";
+}
+else if (currentHour < 23)
+{
+    welcomeText = "Good Evening!";
 }
 
-document.body.innerHTML = welcomeText;
+document.getElementById("time").innerHTML = welcomeText;
