@@ -7,10 +7,24 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+:root {
+    --color-green: #00ff00;
+    --color-shadow-green: rgba(0, 1, 0, 0.5);
+    --color-cyan: #006264;
+    --color-shadow-cyan: rgba(0, 0.38, 0.39, 0.5);
+    --color-yellow: #b48e35;
+    --color-shadow-yellow: rgba(0.7, 0.55, 0.2, 0.5);
+    --color-white: #e3e3e3;
+    --color-grey: #3a3a3a;
+    --color-shadow-grey: rgba(0.22, 0.22, 0.22, 0.5);
+    --color-black: #000;
+    --color-shadow-black: rgba(0, 0, 0, 0.5);
+}
+
 .body, html {
     height: 100%;
     font-family: "Inconsolata", sans-serif;
-    background-color: lightgrey;
+    background-color: var(--color-white);
 }
 
 .top-navigation-bar {
@@ -18,7 +32,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: black;
+    background-color: var(--color-black);
     padding: 10px 20px;
     display: inline-flex;
     gap: 10px;
@@ -27,8 +41,8 @@
 }
 
 .top-navigation-button {
-    color: lightgrey;
-    background-color: black;
+    color: var(--color-white);
+    background-color: var(--color-black);
     text-decoration: none;
     padding: 10px 0;
     flex: 1;
@@ -36,8 +50,8 @@
     transition: background-color 0.1s ease;
 }
 .top-navigation-button:hover {
-    color: black;
-    background-color: lightgrey;
+    color: var(--color-black);
+    background-color: var(--color-white);
 }
 
 .home-big-image {
@@ -46,7 +60,7 @@
         url('resources/rider-background-tile.png') no-repeat left bottom,
         url('resources/rider-background-repeat.png') repeat-x left bottom;
     position: relative;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 20px var(--color-shadow-black);
 }
 
 .home-big-image-center-text {
@@ -55,11 +69,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: var(--color-white);
     font-size: 80px;
     font-weight: bold;
     text-align: center;
-    width: 650px;
+    width: 75%;
     z-index: 1;
 }
 
@@ -68,9 +82,9 @@
     bottom: 41px;
     left: 70px;
     font-size: 10px;
-    color: lawngreen;
+    color: var(--color-green);
     font-family: monospace;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px 3px var(--color-shadow-black);
 }
 
 .home-big-image-lower-blinking-text {
@@ -79,36 +93,96 @@
 }
 @keyframes blink {
     0%, 50% {
-        color: lightgrey;
+        color: var(--color-white);
     }
     51%, 100% {
         color: transparent;
     }
 }
 
-.home-welcome-box {
+.box-parent {
     width: 75%;
-    margin: 20px auto;
+    margin: 100px auto 20px;
     padding-bottom: 30px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 20px var(--color-shadow-grey);
 }
 
-.home-welcome-title {
+.box-title {
     margin: 0;
     padding-top: 30px;
     height: 60px;
     font-size: 24px;
     font-weight: bold;
-    color: #333333;
+    color: var(--color-grey);
     text-align: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px var(--color-shadow-grey);
 }
 
-.home-welcome-context {
+.box-context {
     margin-top: 20px;
     padding: 10px 30px 0 30px;
     font-size: 16px;
-    color: #555555;
+    color: var(--color-grey);
     line-height: 1.6;
     text-align: justify;
+}
+
+.cv-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.cv-image img {
+    width: 75%;
+    height: auto;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: var(--color-grey);
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--color-white);
+    border-radius: 4px;
+}
+
+.input-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+.send-message-button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-cyan);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.send-message-button:hover {
+    background-color: var(--color-shadow-cyan);
+}
+
+.bottom-space {
+    height: 200px;
 }

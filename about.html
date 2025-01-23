@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js"></script>
     <style>
         body, html {
             height: 100%;
@@ -20,6 +21,42 @@
     <a class="top-navigation-button" href="projects.html">PROJECTS</a>
     <a class="top-navigation-button" href="about.html">ABOUT</a>
 </div>
+
+<!-- About me -->
+<div class="box-parent">
+    <h2 class="box-title">This is my story!</h2>
+    <p class="box-context">
+        - I studied software development with a focus on game development at the <a href="https://www.uclancyprus.ac.cy/">University of Central Lancashire in Cyprus</a>. I can confidently say that I had the best years of my life, met some amazing people with whom I still keep in touch, and had so much fun participating in the various projects and courses that UCLan offered. Some memorable moments include the first time I worked with their in-house game engine, "TL-Engine" (more deprecated data about this dinosaur fossil can be found <a href="https://www.studocu.com/en-gb/document/university-of-central-lancashire/games-concepts/co1301-01-lab-worksheet-2015/1168205">here</a>), which used C++ but lacked an editor. It might sound challenging, but looking back, it was an incredible way to force us to think critically and research before committing to deploying any code. Another highlight was when we participated in a group project to create a standalone Android application that could connect to and participate in the university’s Treasure Hunt event. Describing the time invested in that project with just one word might be misleading, but I believe "interesting" captures it well. We delivered the application and participated, but unfortunately faced some network-related issues at the end. As Ralph Waldo Emerson once said, <em>"It's not the destination, it's the journey"</em>.<br><br>
+        - Right after university, I was fortunate enough to land the role of Task Creator at <a href="https://www.qiiwi.com/">Qiiwi Games</a>, where I learned more about the Unity3D engine and had the honor of working with people who genuinely had a passion for what they were doing. As a Task Creator, my role involved communicating and coordinating between all departments to collect the required resources and combine them in the editor, delivering the final product. We then worked closely with the QA team for adjustments and to address any potential corner cases.<br><br>
+        - Eager to experience a larger company and handle more critical tasks, I joined <a href="https://outfit7.com/">Outfit7</a>, a well-known company in the infinite runner and tamagotchi game space, as a Software Developer (II). This role gave me the opportunity to showcase my skills and contribute to a successful project. I was fortunate to add support for foldables and Google Play Games emulation. Additionally, I was introduced to code reviews and a strict codebase monitoring system, which certainly helped make me a better developer.<br><br>
+        - And now, here I am! Inspired and motivated for the next big opportunity to shine and demonstrate what I’m made of (other than water and bones). Please take a look at my CV below for a more detailed description of my professional journey, and don’t hesitate to contact me if you have any questions or are interested in collaborating!<br><br>
+        - Thank you!
+    </p>
+</div>
+
+<div class="cv-image">
+    <img src="./resources/Andreas%20Monoyios%20CV%20v2.5-1.png" alt="Andreas Monoyios CV" width="100%" />
+</div>
+
+<div class="form-container">
+    <form id="contactForm">
+        <div class="input-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="input-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+        <button class="send-message-button" type="submit">Send Message</button>
+    </form>
+</div>
+
+<div class="bottom-space"></div>
 
 </body>
 </html>
